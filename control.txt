@@ -1,0 +1,55 @@
+# Address bus device numbers
+Program Counter                         0
+A0                                      1
+A1                                      2
+Stack pointer                           3
+
+# Data bus device numbers
+Instruction Register                    0   (latch only)
+R0                                      1
+R1                                      2
+R2                                      3
+R3                                      4
+PCL                                     5
+PCH                                     6
+SPL                                     7
+SPH                                     8
+A0L                                     9
+A0H                                     10
+A1L                                     11
+A1H                                     12
+ALU Result                              13  (assert only)
+Memory                                  14
+Flags                                   15
+
+# ALU devices
+R0                                      0
+R1                                      1
+R2                                      2
+R3                                      3
+Immediate Register                      4   (RHS only)
+
+# Control wires (output):
+Address bus device select (4 devices)   2   (devices always assert)
+Data bus device select (16 devices)     4
+Data bus latch / assert                 1   (0 = assert, 1 = latch)
+ALU LHS device (4 devices)              2
+ALU RHS device (5 devices)              3
+Increment select (4 devices)            2   ( Address bus devices - program Counter doesn't decrement so PC
+Increment / decrement                   1   ( decrement means don't increment or decrement anything
+Reset instruction stage                 1
+ALU LHS latch                           1
+ALU RHS latch                           1
+ALU Carry In?                           1
+ALU output latch?                       1
+ALU operation?                          4
+TOTAL                                   24
+
+# Inputs:
+Instruction                             8
+Flags                                   4   ( Zero, Negative, Carry )
+Instruction stage                       3
+TOTAL                                   15
+
+# Control Logic ROMs
+3 x AT28C256 EEPROMs gives 24 control wires

@@ -1,0 +1,7 @@
+*.kicad_pcb-bak
+*.sch-bak
+*.net
+*.dsn
+*.ses
+*.bck
+fp-info-cache

@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name dab-symbol)(type Legacy)(uri R:/dabcpu/kicad_symbols/dab-symbol.lib)(options "")(descr ""))
+  (lib (name dk_Logic-Buffers-Drivers-Receivers-Transceivers)(type Legacy)(uri R:/digikey-kicad-library/digikey-symbols/dk_Logic-Buffers-Drivers-Receivers-Transceivers.lib)(options "")(descr ""))
+)
